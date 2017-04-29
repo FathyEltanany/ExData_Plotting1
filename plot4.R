@@ -6,7 +6,7 @@ data[, 1] <- as.Date(data$Date, format = "%d/%m/%Y")
 
 data <- data[format(data$Date, "%Y-%m-%d") == "2007-02-01" | format(data$Date, "%Y-%m-%d") == "2007-02-02" ,]
 
-png(filename = "plot4.png")
+png(filename = "plot4.png", height = 480, width = 480)
 par(mfrow = c(2,2))
 plot(data$Time, data$Global_active_power, type = "l", xlab= "", ylab = "Global Active Power")
 

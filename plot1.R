@@ -6,6 +6,6 @@ data[, 1] <- as.Date(data$Date, format = "%d/%m/%Y")
 
 data <- data[format(data$Date, "%Y-%m-%d") == "2007-02-01" | format(data$Date, "%Y-%m-%d") == "2007-02-02" ,]
 
-png(filename = "plot1.png")
+png(filename = "plot1.png", height = 480, width = 480)
 hist(data$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main ="Global Active Power")
 dev.off()

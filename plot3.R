@@ -6,7 +6,7 @@ data[, 1] <- as.Date(data$Date, format = "%d/%m/%Y")
 
 data <- data[format(data$Date, "%Y-%m-%d") == "2007-02-01" | format(data$Date, "%Y-%m-%d") == "2007-02-02" ,]
 
-png(filename = "plot3.png")
+png(filename = "plot3.png", height = 480, width = 480)
 plot(data$Time, data$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(data$Time, data$Sub_metering_2, type = "l", col = "red")
 lines(data$Time, data$Sub_metering_3, type = "l", col = "blue")
